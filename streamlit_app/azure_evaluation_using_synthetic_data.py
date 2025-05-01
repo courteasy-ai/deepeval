@@ -39,7 +39,7 @@ AZURE_OPENAI_DEPLOYMENT = os.environ.get("AZURE_DEPLOYMENT")
 AZURE_EMBEDDING_DEPLOYMENT = os.environ.get("AZURE_EMBEDDING_DEPLOYMENT")
 
 # Qdrant configuration - if these aren't set, they'll need to be provided another way
-QDRANT_URI = os.environ.get("QDRANT_URI")
+QDRANT_URI = os.environ.get("QDRANT_URL")
 QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
 QDRANT_COLLECTION = os.environ.get("QDRANT_COLLECTION")
 
@@ -507,8 +507,7 @@ def setup_qdrant_client():
     client = QdrantClient(
         url=QDRANT_URI,
         api_key=QDRANT_API_KEY,
-        port=443, 
-        timeout=10.0
+        port=443, timeout=10.0
     )
     
     return {"client": client, "collection_name": QDRANT_COLLECTION}
@@ -520,7 +519,7 @@ def setup_azure_embeddings():
         openai_api_key=AZURE_OPENAI_API_KEY,
         azure_endpoint=AZURE_OPENAI_ENDPOINT,
         azure_deployment=AZURE_EMBEDDING_DEPLOYMENT,
-        api_version="2024-12-01-preview"
+        api_version="2023-05-15"
     )
     
     return embedding_model
