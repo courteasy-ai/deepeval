@@ -129,9 +129,9 @@ def generate_synthetic_data_from_json_chunks(
     azure_api_key: str,
     azure_endpoint: str,
     azure_deployment: str,
-    num_contexts: int = 20,
+    num_contexts: int = 10,
     chunks_per_context: int = 3,
-    max_goldens_per_context: int = 3,
+    max_goldens_per_context: int = 2,
     output_dir: str = "json_chunks_synthetic_data",
     start_index: int = 0  # Start from a specific index (useful for resuming)
 ):

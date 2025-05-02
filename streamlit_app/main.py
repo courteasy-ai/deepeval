@@ -523,8 +523,8 @@ async def process_document(
                 azure_api_key=azure_api_key,
                 azure_endpoint=azure_endpoint,
                 azure_deployment=azure_deployment,
-                num_contexts=5,  # Reduced for faster processing
-                chunks_per_context=2,
+                num_contexts=10,  # Reduced for faster processing
+                chunks_per_context=5,
                 max_goldens_per_context=2,
                 output_dir=synthetic_dir,
                 start_index=0
