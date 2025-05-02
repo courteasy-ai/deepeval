@@ -1,0 +1,9 @@
+deepeval == 2.7.9
+python-multipart == 0.0.20
+qdrant-client == 1.14.2
+fastapi ==  0.115.9
+uvicorn == 0.34.2
+streamlit == 1.44.1
+plotly == 6.0.1
+chromadb == 1.0.7
+pypdf == 5.4.0
